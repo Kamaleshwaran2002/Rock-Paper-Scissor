@@ -2,7 +2,16 @@ const body = document.body
 const btn = document.querySelector('#btn')
 const firstInput = document.querySelector('#input1')
 const secondInput = document.querySelector('#input2')
+let fcount = 0 
+let scount = 0
+let result = 0
 
+console.log(firstInput)
+console.log(secondInput)
+
+const rock = "rock";
+const paper = "paper"
+const scissor = "scissor"
 
 btn.addEventListener('click', func);
 
@@ -15,98 +24,63 @@ function func(e) {
     //     console.log("successfull-1");
     //     text.innerText = "successfull-1"
     //     body.append(text)
-
     // }
-
-
-    // if ((firstInput.value) < (secondInput.value)) {
-    //     console.log("successfull-1");
-    //     text.innerText = "successfull-1"
-    //     body.append(text)
-    // }
-    // else if ((firstInput.value==3) > (secondInput.value==3)){
-    //     console.log("successfull-2");
-    //     text.innerText = "successfull-2"
-    //     body.append(text)
-    // }
-    // else {
-    //     console.log("failed")
-    //     text.innerText = "failed"
-    //     body.append(text)
-
-    // }
-
-    // if( ((firstInput.value ==1) && (secondInput.value == 2)) || ((firstInput.value ==2) && (secondInput.value == 1)) ) {
-    //     // console.log("1")
-    //     // console.log ("paper");
-    //     if(firstInput.value == 1){
-    //             console.log("1")
-    //             console.log ("paper");
-    //     }
-    //     else{
-    //         console.log("2")
-    //         console.log ("paper");
-    //     }
-    // }
-    // else if ( ((firstInput.value ==2) && (secondInput.value == 3)) || ((firstInput.value ==2) && (secondInput.value == 3))){
-    //     // console.log("1")
-    //     // console.log ("scissor");
-    //     if(firstInput.value == ){
-
-    //     }
-        
-    // }
-    // else if ((firstInput.value ==3) && (secondInput.value == 1)){
-    //     console.log("2")
-    //     console.log ("rock");
-    // }
-    // // else if ((firstInput.value ==2) && (secondInput.value == 1)){
-    // //     console.log("2")
-
-    // //     console.log("paper")
-    // // }
-    // else if ((firstInput.value ==3) && (secondInput.value == 2)){
-    //     console.log("2")
-    //     console.log("scissor")
-    // }
-    // else if ((firstInput.value ==1) && (secondInput.value == 3)){
-    //     console.log("1")
-    //     console.log("rock")
-    // }
-    // else if (firstInput.value == secondInput.value){
-    //     console.log ("draw")
-    // }
-
 
     if(firstInput.value == secondInput.value){
         console.log("both are equal, so match is draw")
+        fcount += 0 
+        scount += 0
+        console.log("count for 1: "+fcount+" count for 2: "+scount);
     }
-    else if(((firstInput.value == 1) && (secondInput.value == 2)) || ((firstInput.value == 2)&&(secondInput.value == 1))){
-        if(firstInput.value  == 2){
+    else if(((firstInput.value == "rock") && (secondInput.value == "paper")) || ((firstInput.value == "paper")&&(secondInput.value == "rock"))){
+        if(firstInput.value  == "paper"){
             console.log("1-paper")
+            fcount += 1
+            console.log("count for 1:"+ fcount)
         }
         else{
             console.log("2-paper")
+            scount += 1
+            console.log("count for 2:"+ scount )
         }
     }
-    else if(((firstInput.value == 2) && (secondInput.value == 3)) || ((firstInput.value == 3)&&(secondInput.value == 2))){
-        if(firstInput.value  == 3){
+    else if(((firstInput.value == "paper") && (secondInput.value == "scissor")) || ((firstInput.value == "scissor")&&(secondInput.value == "paper"))){
+        if(firstInput.value  == "scissor"){
             console.log("1-scissor")
+            fcount += 1
+            console.log("count for 1:"+ fcount)
         }
         else{
             console.log("2-scissor")
+            scount += 1
+            console.log("count for 2:"+ scount)
         }
     }
-    else if(((firstInput.value == 3) && (secondInput.value == 1)) || ((firstInput.value == 1)&&(secondInput.value == 3))){
-        if(firstInput.value  == 1){
+    else if(((firstInput.value == "rock") && (secondInput.value == "scissor")) || ((firstInput.value == "scissor")&&(secondInput.value == "rock"))){
+        if(firstInput.value  == "rock"){
             console.log("1-rock")
+            fcount += 1
+            console.log("count for 1:"+ fcount)
         }
         else{
             console.log("2-rocx")
+            scount += 1
+            console.log("count for 2:"+ scount)
         }
     }
     else{
         console.log("input are beyond the limit")
+    }
+
+
+    if(fcount == scount){
+        console.log("both are equal")
+    }
+    else if(fcount > scount){
+        console.log("winner is 1")
+    }
+    else{
+        console.log("winner is 2")
     }
 }
 
