@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,20 +8,18 @@
     <title>Rock-Paper-Scissor</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="main">
-        <h3>Rock-Paper-Scissor</h3>
-        <p> num: 1 for rock<br> num: 2 for paper<br>num: 3 for scissor</p>
-        <form action="#" id="main-form">
-            <label >input fieled-1</label>
-            <input type="text" id="input1"><br><br>
-            <label >input fieled-2</label>
-            <input type="text" id="input2">
-        </form>
-        <button id="btn">submit</button>
+   <div class="gameDiv">
+       <h1 class="gameText" id="playerText">Player: </h1>
+       <h1 class="gameText" id="computerText">Computer: </h1>
+       <h1 class="gameText" id="resultText">Result: </h1>
+   </div>
 
-    </div>
-
+   <button class="choiceBtn">Rock</button>
+   <button class="choiceBtn">Paper</button>
+   <button class="choiceBtn">Scissor</button>
     <script src="main.js"></script>
 </body>
+
 </html>
