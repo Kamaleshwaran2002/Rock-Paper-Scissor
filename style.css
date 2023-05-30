@@ -1,3 +1,10 @@
+*body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* background: url('images/rockpaperscissor.jpg'); */
+}   
+ /* css for gameDiv */
 .gameDiv{
     /* font-family: 'Brush Script MT', cursive; */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -8,6 +15,7 @@
     text-align: center;
 }
 
+/* css for buttons */
 .choiceBtn{
     line-height: 40px;
     font-size: 20px;
@@ -18,6 +26,8 @@
     border-radius: 20px ;
 }
 
+
+/* css for displaying score */
 .score{
     display: flex;
     justify-content: space-around;
