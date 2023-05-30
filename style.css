@@ -3,8 +3,8 @@
     margin: 0;
     box-sizing: border-box;
     /* background: url('images/rockpaperscissor.jpg'); */
-    display: flex;
-    flex-wrap: ;
+    /* display: flex;
+    flex-wrap: ; */
 }   
  /* css for gameDiv */
 .gameDiv{
@@ -49,13 +49,13 @@
     color: red;
 }
 
-@media (max-width:500px){
+/* @media (max-width:500px) and (min-width:300px){
     .body{
         padding: 0;
         margin: 0;
     }
     .gameDiv {
-        width: 320px;
+        width: 350px;
         margin: 0;
     }
     
@@ -68,11 +68,57 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        font-size: 15px;
     }
 
     .choiceBtn{
         margin: 4px;
     }
+} */
 
+/* @media (max-width:300px){
+    .gameDiv{
+        width: 200px;
+    }
 
+    h1{
+        font-size: 15px;
+    }
+
+    .btn{
+        font-size: 10px;
+    }
+} */
+
+@media (max-width:500px)and (min-width:300px){
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .gameDiv{
+            width: 320px;
+        }
+
+        h1{
+            font-size: 20px;
+        }
+
+        .score h1{
+            font-size: 17px;
+        }
+        .btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* flex-wrap: wrap; */
+        }
+
+        .choiceBtn{
+            margin: 4px;
+            font-size: 15px;
+            font-weight: 500;
+        }
 }
