@@ -3,6 +3,8 @@
     margin: 0;
     box-sizing: border-box;
     /* background: url('images/rockpaperscissor.jpg'); */
+    display: flex;
+    flex-wrap: ;
 }   
  /* css for gameDiv */
 .gameDiv{
@@ -45,4 +47,32 @@
 }
 #computerText{
     color: red;
+}
+
+@media (max-width:500px){
+    .body{
+        padding: 0;
+        margin: 0;
+    }
+    .gameDiv {
+        width: 320px;
+        margin: 0;
+    }
+    
+    h1{
+        font-size: 20px;
+    }
+
+    .btn{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .choiceBtn{
+        margin: 4px;
+    }
+
+
 }
